@@ -1,0 +1,187 @@
+body{
+    height: 50vh !important;
+    background: url(../img/fondo-two.jpg) no-repeat center;
+    background-size: cover;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 10px 10px #000000;
+    padding: 235px;
+}
+@keyframes jump {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+@keyframes colores {
+  0% { border-color: red; }
+  25% { border-color: black; }
+  50% { border-color: red; }
+  75% { border-color: black; }
+  100% { border-color: red; }
+}
+h2{
+    background: linear-gradient(to left,black, maroon,black);
+    background-size: 100% 100%;
+    position: center;
+    margin-bottom:100px;
+    margin-top: -100px;
+    margin-left: 100px;
+    font-size:500%;
+    color:black;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    box-shadow: 0px 0px 50px 30px black;
+    padding: 5px 200px;
+    border-radius: 5rem;    
+    animation: jump 3s infinite;
+    white-space: nowrap; 
+}
+.h2 {
+    margin-right: 200px;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+table {
+  margin-bottom: 80px;
+    font-size: 18px;
+    font-weight: bold;
+    width: 50%;
+    border-collapse: collapse;
+    animation: fadeIn 2s ease-in-out forwards;
+  }
+
+th{
+  padding: 5px 40px;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+td{
+  padding: 5px 20px;
+  text-align: center;
+}
+
+td:hover {
+   -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(10px);
+  background-color:  rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  }
+.table-table{
+  font-size: 20px;
+  font-weight: bold;
+  width: 60%;
+  border-collapse: collapse;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+.table2 a{
+  margin-right: 50px;
+  background: linear-gradient(to left,black, red,black);
+  background-size: 100% 100%;
+  position: center;
+  border-bottom: 2px solid black;
+  animation: colores 3s infinite;
+  display: inline-flex;
+  padding: 10px 100px;
+  color: black;
+  border-radius: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'Times New Roman';
+  font-weight: bold; 
+  box-shadow:0px 0px 20px 10px black;
+}
+.table2 {
+  animation: fadeIn 2s ease-in-out forwards;
+}
+.table2 a:hover {
+  border: 2px solid black ;
+  color:black;
+  box-shadow: 0px 0px 20px 10px red;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding: 20px 50px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
+  background-color:  rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 50px 20px #000000;
+  border: 3px solid black;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+.controls {
+  flex: 2;
+  margin-right: 20px;
+  padding: 5px 12px;
+  border-radius: 1rem;
+  margin-bottom: 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  background-color:  rgba(255, 255, 255, 0.1);
+}
+.controls:hover{
+  box-shadow: 0px 10px 10px #000000;
+  border: 2px solid black;
+}
+label {
+  flex: 1;
+  margin-right: 135px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+.input_final {
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-weight: bold;
+  background: none;
+  text-align: center;
+  box-shadow: 0px 10px 100px #000000;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(1px); 
+  border: 1px solid black;
+}
+.input_final:hover{
+  border: 2px solid red;
+  color: red;
+  box-shadow: 0px 1px 30px red;    
+}

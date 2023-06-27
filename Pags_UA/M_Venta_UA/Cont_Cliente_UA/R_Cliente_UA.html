@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SOFTY_ADM</title>
+    <meta name="description" content="Esta es una pagina web para administracion">
+    <meta name="author" content="MISTIC_ART">
+    <meta name="keywords" content="administracion, pagina web para administracion,pagina web">
+    <meta charset="UTF-8"> 
+    <script src="https://kit.fontawesome.com/e9121b317f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-one">
+            <a href="../../inicio_UA.php">INICIO</a>
+            <a href="../../Ventas_UA.html">VENTAS</a>
+            <a href="../../Inventario_UA.html">INVENTARIO</a>
+        </nav>
+        <div>
+            <table class="logo-m">
+                <tr>
+                    <td><img class="logo" src="../../../img/logo-3.0.png"></td>
+                </tr>
+            </table>
+        </div>  
+        <nav class="nav-two">         
+            <a href="../../Proveedor_UA.html">PROVEEDORES</a>
+            <a href="../../../Iniciar_Sesion/Ingresar.php">INGRESAR</a>
+            <a href="../../Nosotros.html">NOSOTROS</a>
+        </nav>
+    </header>
+    <section class="section-principal">
+        <h2 class="title_fi">REGISTRAR CLIENTE</h2><br>
+        <form action="../Cont_Cliente_UA/RTAS_C_UA/insert_Cliente.php" method="post">
+            <label for="id_cliente">ID CLIENTE.</label>
+            <input class="controls" type="text" id="id_cliente" name="id_cliente" required>
+            <label for="n°_cliente_reg">N° CLIENTE REGISTRADO .</label>
+            <input class="controls" type="text" id="n°_cliente_reg" name="n°_cliente_reg" required>
+            <label for="nombre_cliente">NOMBRE CLIENTE.</label>
+            <input class="controls" type="text" id="nombre_cliente" name="nombre_cliente" required>
+            <label for="tipo_cliente">TIPO CLIENTE.</label>
+            <input class="controls" type="text" id="tipo_cliente" name="tipo_cliente" required>
+            <label for="descripcion_cliente">DESCRIPCION CLIENTE.</label>
+            <input class="controls" type="text" id="descripcion_cliente" name="descripcion_cliente" required>
+            <label for="direccion_cliente">DIRECCION CLIENTE.</label>
+            <input class="controls" type="text" id="direccion_cliente" name="direccion_cliente" required>
+            <label for="ubicacion_cliente">UBICACION CLIENTE .</label>
+            <input class="controls" type="text" id="ubicacion_cliente" name="ubicacion_cliente" required>
+            <label for="contacto_cliente">CONTACTO CLIENTE .</label>
+            <input class="controls" type="text" id="contacto_cliente" name="contacto_cliente" required>
+            <label for="email_cliente">EMAIL CLIENTE .</label>
+            <input class="controls" type="text" id="email_cliente" name="email_cliente" required>
+            <label for="tipo_contacto_cliente">TIPO DE CONTACTO DEL CLIENTE .</label>
+            <input class="controls" type="text" id="tipo_contacto_cliente" name="tipo_contacto_cliente" required>
+            <input class="controls" type="submit" value="REGISTRAR">
+           
+        </form>
+    </section>
+</body>
+</html>
