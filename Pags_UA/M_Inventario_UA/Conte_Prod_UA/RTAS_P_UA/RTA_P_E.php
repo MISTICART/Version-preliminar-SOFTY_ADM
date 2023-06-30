@@ -26,7 +26,7 @@
          echo "Error al eliminar el producto: " . $conex->error;
      }
      
-     echo'<table>
+     echo'<table class="table2">
         <tr>
             <th><a href="../E_Producto.html">CONTINUAR</a></th>
         </tr>';

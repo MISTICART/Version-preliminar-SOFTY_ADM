@@ -25,7 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $sql = "SELECT * FROM producto WHERE id_producto = $id_producto LIMIT 1";
         $result = $conex->query($sql);
-        echo '<table>
+
+        if ($result && $result->num_rows > 0) {
+            echo '<table>
             <tr>
                 <th>ID Producto</th> 
                 <th>Nombre Producto</th>
@@ -35,28 +37,29 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <th>Unidad Producto</th>
                 <th>Numero Paquetes</th>
                 <th>Cajas Producto</th>
-        </tr>';
-        if ($result && $result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            $id_producto = $row["id_producto"];
-            $nombre_p = $row["nombre_p"];
-            $estado_p = $row["estado_p"];
-            $precio_p = $row["precio_p"];
-            $descripcion_p = $row["descripcion_p"];
-            $unidad_p = $row["unidad_p"];
-            $n_paquetes = $row["n_paquetes"];
-            $n_cajas_p = $row["n_cajas_p"];
-            echo '<tr>
-              <td>' . $id_producto . '</td> 
-              <td>' . $nombre_p . '</td>
-              <td>' . $estado_p . '</td>
-              <td>' . $precio_p . '</td>
-              <td>' . $descripcion_p . '</td>
-              <td>' . $unidad_p . '</td>
-              <td>' . $n_paquetes . '</td>
-              <td>' . $n_cajas_p . '</td>
             </tr>';
-        } else {
+    
+            while ($row = $result->fetch_assoc()) {
+                $id_producto = $row["id_producto"];
+                $nombre_p = $row["nombre_p"];
+                $estado_p = $row["estado_p"];
+                $precio_p = $row["precio_p"];
+                $descripcion_p = $row["descripcion_p"];
+                $unidad_p = $row["unidad_p"];
+                $n_paquetes = $row["n_paquetes"];
+                $n_cajas_p = $row["n_cajas_p"];
+                echo '<tr>
+                  <td>' . $id_producto . '</td> 
+                  <td>' . $nombre_p . '</td>
+                  <td>' . $estado_p . '</td>
+                  <td>' . $precio_p . '</td>
+                  <td>' . $descripcion_p . '</td>
+                  <td>' . $unidad_p . '</td>
+                  <td>' . $n_paquetes . '</td>
+                  <td>' . $n_cajas_p . '</td>
+                </tr>';
+            }
+            }else {
             echo "<p>No se encontró el producto con el ID: $id_producto</p>";
         }
         echo '<table class="table2";>
@@ -65,13 +68,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <th><a href="../C_Producto.html">CONTINUAR</a></th> 
             <th><a href="../E_Producto.html?id=' . $id_producto . '">ELIMINAR</a></th> 
         </tr>';
-      
-        $result->free();
-        $conex->close();
-    } else {
-    
+          } else {
         echo "<p>No se proporcionó el ID del producto</p>";
     }
+        echo '<form action="descarga_P.php" method="post">
+                <input type="hidden" name="sql" value="' . htmlentities($sql) . '">
+                <input class="input_final" type="submit" value="DESCARGAR TABLA">
+              </form>';
+            } else {
+              echo "<p>NO SE ENCONTRARON REGISTROS EN LA TABLA DE PRODUCTOS</p>";
+               
+        $result->free();
+        $conex->close();
+  
 }
 ?>
 

@@ -12,43 +12,46 @@
 <body>
     <header class="header">
         <nav class="nav-one">
-            <a href="../index.html">INICIO</a>
-            <a href="../Pags_ADM/Ventas_ADM.html">VENTAS</a>
-            <a href="#">INVENTARIO</a>
+            <a href="inicio_ADM.html">INICIO</a>
+            <a href="Ventas_ADM.html">VENTAS</a>
+            <a href="Inventario_ADM.html">INVENTARIO</a>
         </nav>
-        <div class="logo">
-            <table>
+        <div>
+            <table class="logo-m">
                 <tr>
                     <td><img class="logo" src="../img/logo-3.0.png"></td>
                 </tr>
             </table>
         </div>  
-        <nav class="nav-two">         
-            <a href="../Pags_ADM/Proveedor_ADM.html">PROVEEDORES</a>
-            <a href="../Ingresar.html">INGRESAR</a>
-            <a href="#">PROXIMAMENTE</a>
+        <nav  class="nav-two">
+            <a href="Proveedor_ADM.html">PROVEEDORES</a>
+            <a href="Solicitudes.php">SOLICITUDES</a>
+            <a href="../Iniciar_Sesion/Ingresar.php">INGRESAR</a>
         </nav>
     </header>
-    <article class="article-principal">                                                                                                                                                                                                                                                                                
-        <h2 class="title"> INVENTARIO </h2>
-    </article>
     <section class="section-principal">
-        <h2>MENU DE OPCIONES</h2><br>
-        <div class="contend-menu">
-            <ul class="menu">
-                <li><a href="">PRODUCTO</a>
+        <h2 class="title_i" >INVENTARIO</h2><br>
+        <div class="contend-menu-inventario">
+            <ul class="menu-inventario">
+                <li>
+                   <div class="sub-inventario">PRODUCTO</div>
                     <ul>
-                        <li>REGISTRAR PRODUCTO</li>
-                        <li>CONSULTAR PRODUCTO</li>
-                        <li>MODIFICAR PRODUCTO</li>
-                        <li>ELIMINAR PRODUCTO</li>
+                        <li> <a href="M_Inventario_ADM/Conte_Prod_ADM/R_Producto.html">REGISTRAR PRODUCTO</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Prod_ADM/C_Producto.html">CONSULTAR PRODUCTO</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Prod_ADM/M_Producto.html">MODIFICAR PRODUCTO</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Prod_ADM/E_Producto.html">ELIMINAR PRODUCTO</a> </li>
                     </ul>
                 </li>
-                <li><a href="">REPORTES</a> 
+                <li>
+                    <div class="sub-inventario">REGISTROS</div> 
                     <ul>
-                        <li>REGISTRAR REPORTE</li>
-                        <li>CONSULTAR REPORTE</li>
-                        <li>ELIMINAR REPORTE</li>
+                        <li> <a href="M_Inventario_ADM/Conte_Registros_ADM/Resgistro_V.php">REGISTRO DE VENTAS</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Registros_ADM/Registro_P.php">REGISTRO DE PRODUCTOS</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Registros_ADM/Registro_C.php">REGISTRO DE CLIENTES</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Registros_ADM/Registro_R.php">REGISTRO DE REPORTES</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Registros_ADM/Registro_CF.php">REGISTRO DE LOS CIERRES FINALES</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Registros_ADM/Registro_S.php">REGISTRO DE LAS SOLICITUDES</a> </li>
+                        <li> <a href="M_Inventario_ADM/Conte_Registros_ADM/Registro_UA.php">REGISTRO DE USUARIO_ADM</a> </li>
                     </ul>
                 </li>
             </ul>

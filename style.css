@@ -28,7 +28,7 @@ body {
     align-items: center;
     flex-direction: column;
     box-shadow: 0px 10px 10px #000000;
-    padding: 245px;
+    padding: 243px;
 }
 .article-login {
     height: 50vh !important;
@@ -290,7 +290,7 @@ body {
 
 .nav-two a:hover {
     border: 2px solid black;
-    color: red;
+    color: black;
     box-shadow: 0px 0px 50px 20px red;
 }
 h2{
@@ -325,6 +325,23 @@ title {
     box-shadow: 0px 0px 50px 20px black;
     padding: 2% 40%;
     border-radius: 1rem;
+}
+.title_soli{
+    background: linear-gradient(to left,black,red,black);
+    background-size: 100% 100%;
+    position: center;
+    margin-bottom:10px;
+    margin-top: 100px;
+    margin-left: 100px;
+    font-size:500%;
+    color:black;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+    box-shadow: 0px 0px 50px 30px black;
+    padding: 5px 280px;
+    border-radius: 5rem;    
+    animation: jump 3s infinite;
+    white-space: nowrap;
 }
 @keyframes rotateOnce {
     0% {
@@ -367,6 +384,7 @@ title {
     padding: 5px 280px;
     border-radius: 5rem;    
     animation: jump 3s infinite;
+    white-space: nowrap;
 }
 .title-index2 {
     margin-right: 200px;
@@ -664,7 +682,7 @@ ul {
     display: block;
     margin-top: 300px;
     margin-left: 250px;
-    margin-right: -150px;
+    margin-right: -200px;
     border-radius: 2rem;
     border-bottom: 2px solid black;
     animation: colores 3s infinite;
@@ -679,7 +697,8 @@ ul {
     padding: 5px 10px;
     display: block;
     margin-top: 20px;
-    margin-left: 200px;
+    margin-left: 180px;
+   
 }
 .menu-inventario li a:hover{
     border-radius: 2rem;
@@ -735,7 +754,7 @@ ul {
     padding: 5px 10px;
     display: block;
     margin-top: 20px;
-    margin-left: 220px;
+    margin-left: 280px;
 }
 .menu-prov li a:hover{
     border-radius: 2rem;
@@ -771,6 +790,47 @@ ul {
     backdrop-filter: blur(10px);
     background-color:  rgba(255, 255, 255, 0.1);
 }
+
+.E1{
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: 100px;
+    border-bottom: 2px solid black;
+    animation: colores 3s infinite;
+    margin-bottom: 20px;
+}
+.E2{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+.E3{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 100px;
+}
+
+.controlsE {
+    color: black;
+    text-decoration: none;
+    margin-right: 20px;
+    padding: 5px 80px;
+    border-radius: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    background-color:  rgba(255, 255, 255, 0.1);
+    border: 2px solid black;
+}
+.controlsE:hover{
+    box-shadow: 0px 10px 10px #000000;
+    border: 2px solid black;
+}
 .form-login{
     display: flex;
     flex-wrap: wrap;
@@ -796,7 +856,6 @@ ul {
     width: 100%;
     margin-bottom: 10px;
 }
-
 .form-venta {
     display: flex;
     flex-direction: row;
@@ -847,11 +906,13 @@ ul {
     text-align: left;
     margin-right: 100px;
 }
+
 .textarea {
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 16px;
     padding: 5px 30px;
     border-radius: 1rem;
+    border-bottom: 2px solid black;
     font-weight: bold;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -884,7 +945,61 @@ form {
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
 }
-
+.fomr-soli{
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 10%;
+    padding: 20px 50px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    background-color:  rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 50px 20px #000000;
+    border: 3px solid black;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.Fsolicitud{
+    display: inline-block;
+    flex-wrap: wrap;
+    width: 40%;
+    padding: 20px 50px;
+    margin: auto;
+    margin-top: 300px;
+    border-radius: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    background-color:  rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 0px 50px 20px #000000;
+    border: 3px solid black;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+.solicitud p {
+    font-weight: bold;
+    margin-bottom: -250px;
+}
+.solicitud label {
+    display: block;
+    margin-bottom: 5px;
+}
+.solicitud input[type="text"] {
+    width: 50%;
+    padding: 5px 30px;
+    border-radius: 1rem;
+    border:2px solid black ;
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(10px);
+    background-color:  rgba(255, 255, 255, 0.1);
+}
+.solicitud .input_final {
+    font-weight: bold;
+    margin-top: 10px;
+}
 .form-reporte {
     display: flex;
     flex-wrap: wrap;
@@ -924,6 +1039,7 @@ form {
     backdrop-filter: blur(10px);
     text-align: center;
     background-color:  rgba(255, 255, 255, 0.1);
+    border: 2px solid black;
 }
 .controls:hover{
     box-shadow: 0px 10px 10px #000000;
@@ -943,6 +1059,7 @@ select {
     width: 100%;
     padding: 10px 110px;
     border-radius: 1rem;
+    border-bottom: 2px solid black;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
     background: none;
@@ -953,6 +1070,7 @@ select:hover{
     box-shadow: 0px 10px 10px #000000;
 } 
 .option {
+    
     color: rgb(0, 0, 0);
     background-color:rgb(134, 134, 134);
     text-align: left;

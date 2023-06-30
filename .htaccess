@@ -1,0 +1,2 @@
+ErrorDocument 500 /PAG_SOFTY_ADM/500.html
+ErrorDocument 404 /PAG_SOFTY_ADM/404.html

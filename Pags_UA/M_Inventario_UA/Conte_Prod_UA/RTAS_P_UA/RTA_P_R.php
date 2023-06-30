@@ -15,18 +15,18 @@
     </div>
     <?php
      include_once "../../../../Iniciar_Sesion/conexion.php";
-    
-     $sql = "SELECT * FROM producto WHERE id_producto = $id_producto LIMIT 1";
+     $nombre_p = $_POST["nombre_p"];
+     $sql = "SELECT * FROM producto WHERE nombre_p = '$nombre_p' LIMIT 1";
      echo '<table>
             <tr>
-                <th>ID Producto</th> 
-                <th>Nombre Producto</th>
-                <th>Estado Producto</th>
-                <th>Precio Producto</th>
-                <th>Descripcion Producto</th>
-                <th>Unidad Producto</th>
-                <th>Numero Paquetes</th>
-                <th>Cajas Producto</th>
+                <th>   ID Producto           </th> 
+                <th>   Nombre Producto       </th>
+                <th>   Estado Producto       </th>
+                <th>   Precio Producto       </th>
+                <th>   Descripcion Producto  </th>
+                <th>   Unidad Producto       </th>
+                <th>   Numero Paquetes       </th>
+                <th>   Cajas Producto        </th>
         </tr>';
   
 
@@ -41,21 +41,21 @@
                 $n_paquetes = $row["n_paquetes"];
                 $n_cajas_p = $row["n_cajas_p"];
                 echo '<tr>
-                  <td>' . $id_producto . '</td> 
-                  <td>' . $nombre_p . '</td>
-                  <td>' . $estado_p . '</td>
-                  <td>' . $precio_p . '</td>
-                  <td>' . $descripcion_p . '</td>
-                  <td>' . $unidad_p . '</td>
-                  <td>' . $n_paquetes . '</td>
-                  <td>' . $n_cajas_p . '</td>
+                  <td>'  . $id_producto   . '</td> 
+                  <td>'  . $nombre_p      . '</td>
+                  <td>'  . $estado_p      . '</td>
+                  <td>'  . $precio_p      . '</td>
+                  <td>'  . $descripcion_p . '</td>
+                  <td>'  . $unidad_p      . '</td>
+                  <td>'  . $n_paquetes    . '</td>
+                  <td>'  . $n_cajas_p     . '</td>
                 </tr>';
             }
     echo '<table class="table2";>
             <tr>
-                <th><a href="../M_Producto.html?id=' . $id_producto . '">MODIFICAR</a></th> 
+                <th><a href="../M_Producto.html">MODIFICAR</a></th> 
                 <th><a href="../R_Producto.html">CONTINUAR</a></th> 
-                <th><a href="../E_Producto.html?id=' . $id_producto . '">ELIMINAR</a></th> 
+                <th><a href="../E_Producto.html">ELIMINAR</a></th> 
             </tr>';
             $RTA->free();
         }

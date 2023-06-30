@@ -33,20 +33,25 @@
         <h2 class="title_fi">REGISTRAR VENTA</h2><br>
         <form class="form-venta" action="../Conte_Venta_UA/RTAS_V_UA/insert_Venta.php" method="post">
             
-            <label for="id_venta">ID DE LA VENTA.</label>
-            <input class="controls" type="number" id="id_venta" name="id_venta" required>
             <label for="n°_ventas">N° DE VENTA.</label>
             <input class="controls" type="number" id="n°_ventas" name="n°_ventas" required>
             <label for="descripcion_venta">DESCRIPCION DE VENTA.</label>
             <textarea class="textarea" id="descripcion_venta" name="descripcion_venta" required></textarea>
-            <label for="metodo_pago_venta">METODO PAGO DE VENTA.</label>
-            <input class="controls" type="text" id="metodo_pago_venta" name="metodo_pago_venta" required>
             <label for="monto_venta">MONTO DE VENTA.</label>
             <input class="controls" type="number" id="monto_venta" name="monto_venta" required>
             <label for="cant_vendida">CANTIDAD DE VENTA.</label>
             <input class="controls" type="number" id="cant_vendida" name="cant_vendida" required>
-            <label for="hora_fecha_venta">HORA Y FECHA DE VENTA .</label>
+            <label for="hora_fecha_venta">HORA Y FECHA.</label>
             <input class="controls" type="datetime-local" id="hora_fecha_venta" name="hora_fecha_venta" required>
+            <div class="form-group">
+                <label for="metodo_pago_venta"> METODO PAGO DE VENTA. </label>
+             <select id="metodo_pago_venta" name="metodo_pago_venta">
+                 <option class="option" value=""></option>
+                 <option class="option" value="efectivo">EFECTIVO</option>
+                 <option class="option" value="tarjeta">TARJETA</option>
+             </select><br> 
+             </div>
+           
             <input class="input_final" type="submit" value="REGISTRAR">
            
         </form>

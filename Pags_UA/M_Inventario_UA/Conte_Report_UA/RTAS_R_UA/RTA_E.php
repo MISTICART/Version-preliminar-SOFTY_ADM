@@ -7,7 +7,7 @@
     <meta name="keywords" content="administracion, pagina web para administracion,pagina web">
     <meta charset="UTF-8"> 
     <script src="https://kit.fontawesome.com/e9121b317f.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../style_rtas.css">
+    <link rel="stylesheet" href="../../../style_rtas.css">
 </head>
 <body>
 <div class="h2">

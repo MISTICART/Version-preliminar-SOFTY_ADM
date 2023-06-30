@@ -38,10 +38,13 @@
     </div>
     </article>
     <section class="section-principal">
-        <h2 class="title-index">NOVEDADES</h2><br>
-        <p>
-          PROXIMAMENTE...
-        </p>
+        <h2 class="title-index">PRESENTACION</h2><br>
+       
+ 
+        <div>
+            <a class="controlsE" href="https://docs.google.com/presentation/d/1w8A9tMmFrCo6J4FQ0tuo2lBCDneLvcAk/edit#slide=id.p1">PRESENTACION</a>
+            <a class="controlsE" href="https://drive.google.com/drive/u/0/folders/1uVCxI0_0orwvOBjVbBKMZFxXNLPrtun8">CASOS DE USO</a>
+        </div>
     </section>
 </body>
 </html>

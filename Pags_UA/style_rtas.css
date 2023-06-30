@@ -60,7 +60,45 @@ h2{
     opacity: 0;
     animation: fadeIn 2s ease-in-out forwards;
 }
-
+.title-index {
+  background: linear-gradient(to left,black, red,black);
+  background-size: 100% 100%;
+  position: center;
+  margin-bottom:10px;
+  margin-top: 30px;
+  margin-left: 100px;
+  font-size:500%;
+  color:black;
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  box-shadow: 0px 0px 50px 30px black;
+  padding: 5px 200px;
+  border-radius: 5rem;    
+  animation: jump 3s infinite;
+  white-space: nowrap;
+}
+.title-index2 {
+  margin-right: 200px;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+.solicitud{
+  background: linear-gradient(to left,black, red,black);
+  background-size: 100% 100%;
+  position: center;
+  margin-bottom:50px;
+  margin-top: 10px;
+  margin-left: 100px;
+  font-size:500%;
+  color:black;
+  font-family: 'Times New Roman';
+  font-weight: bold;
+  box-shadow: 0px 0px 50px 30px black;
+  padding: 5px 200px;
+  border-radius: 5rem;    
+  animation: jump 3s infinite;
+  white-space: nowrap;
+}
 table {
   margin-bottom: 80px;
     font-size: 18px;
@@ -75,6 +113,7 @@ th{
   text-align: center;
   border-bottom: 2px solid black;
 }
+
 td{
   padding: 5px 20px;
   text-align: center;
@@ -136,6 +175,55 @@ form {
   opacity: 0;
   animation: fadeIn 2s ease-in-out forwards;
 }
+.form_CF {
+  white-space: nowrap;
+  display: block;
+  flex-wrap: wrap;
+  width: 20%;
+  padding: 20px 20px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 1rem;
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(10px);
+  background-color:  rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 50px 20px #000000;
+  border: 3px solid black;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+p{
+    margin-bottom:10px;
+    margin-top: 10px;
+    font-size:100%;
+    color:black;
+    font-family: 'Times New Roman';
+    font-weight: bold;
+  border-bottom: 2px solid black;
+    padding: 2% 10%;
+    border-radius: 1rem;
+}
+select {
+  width: 100%;
+  padding: 10px 110px;
+  border-radius: 1rem;
+  border-bottom: 2px solid black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  background: none;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(1px);
+}
+select:hover{
+  box-shadow: 0px 10px 10px #000000;
+} 
+.option {
+  
+  color: rgb(0, 0, 0);
+  background-color:rgb(134, 134, 134);
+  text-align: left;
+}
 .controls {
   flex: 2;
   margin-right: 20px;
@@ -166,7 +254,7 @@ label {
 }
 .input_final {
   width: 100%;
-  padding: 10px 10px;
+  padding: 5px 10px;
   border-radius: 1rem;
   margin-bottom: 20px;
   margin-top: 10px;
@@ -184,4 +272,34 @@ label {
   border: 2px solid red;
   color: red;
   box-shadow: 0px 1px 30px red;    
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table td {
+  padding: 5px;
+  text-align: center;
+}
+.solicitud{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  padding: 20PX 180PX;
+  font-weight: bold;
+}
+table td a {
+  display: block;
+  padding: 10px;
+  -webkit-backdrop-filter: blur(100px);
+  backdrop-filter: blur(1px); 
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 20px;
+  border-radius: 1rem;
+  border-bottom: 2px solid black;
+  animation: colores 3s infinite;
+  box-shadow: 0px 10px 100px #000000;
 }

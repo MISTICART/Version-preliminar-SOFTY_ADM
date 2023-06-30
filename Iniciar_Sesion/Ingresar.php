@@ -42,7 +42,7 @@
             <div class="form-group">
                <label for="rol"> SELECCIONE EL ROL AL QUE PERTENECE. </label>
             <select id="rol" name="rol">
-                <option class="option" value=""></option>
+                <option class="option" value="" selected ></option>
                 <option class="option" value="usuario_adm">USUARIO_ADM</option>
                 <option class="option" value="administrador">ADMINISTRADOR</option>
             </select><br> 

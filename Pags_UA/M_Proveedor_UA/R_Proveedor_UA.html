@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SOFTY_ADM</title>
+    <meta name="description" content="Esta es una pagina web para administracion">
+    <meta name="author" content="MISTIC_ART">
+    <meta name="keywords" content="administracion, pagina web para administracion,pagina web">
+    <meta charset="UTF-8"> 
+    <script src="https://kit.fontawesome.com/e9121b317f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-one">
+            <a href="../inicio_UA.php">INICIO</a>
+            <a href="../Ventas_UA.html">VENTAS</a>
+            <a href="../Inventario_UA.html">INVENTARIO</a>
+        </nav>
+        <div>
+            <table class="logo-m">
+                <tr>
+                    <td><img class="logo" src="../../img/logo-3.0.png"></td>
+                </tr>
+            </table>
+        </div>  
+        <nav class="nav-two">         
+            <a href="../Proveedor_UA.html">PROVEEDORES</a>
+            <a href="../Nosotros.html">NOSOTROS</a>
+            <a href="../../Iniciar_Sesion/Ingresar.php">INGRESAR</a>
+            
+        </nav>
+    </header>
+    <section class="section-principal">
+        <h2 class="title_fi">REGISTRAR PROVEEDOR </h2><br>
+        <form class="form-venta" action="RTA_P_UA/insert_Proveedor.php" method="post">
+            
+            <label for="nombre_proveedor">NOMBRE DEL PROVEEDOR.</label>
+            <input class="controls" type="text" id="nombre_proveedor" name="nombre_proveedor" required>
+            <label for="direccion_proveedor">DIRECCION DEL PROVEEDOR.</label>
+            <input class="controls" type="text" id="direccion_proveedor" name="direccion_proveedor" required>
+            <label for="ubicacion_proveedor">UBICACION DEL PROVEEDOR.</label>
+            <input class="controls" type="text" id="ubicacion_proveedor" name="ubicacion_proveedor" required>
+            <label for="contacto_proveedor">CONTACTO DEL PROVEEDOR.</label>
+            <input class="controls" type="number" id="contacto_proveedor" name="contacto_proveedor" required>
+            <label for="email_proveedor">EMAIL DEL PROVEEDOR.</label>
+            <input class="controls" type="text" id="email_proveedor" name="email_proveedor" required>
+            <div class="form-group">
+            <label for="tipo_proveedor"> TIPO DEL PROVEEDOR.</label>
+            <select id="tipo_proveedor" name="tipo_proveedor">
+                 <option class="option" value="" selected></option>
+                 <option class="option" value="servicios">SERVICIOS</option>
+                 <option class="option" value="bienes">BIENES</option>
+            </select><br> 
+            </div>
+           
+            <input class="input_final" type="submit" value="REGISTRAR">
+           
+        </form>
+    </section>
+</body>
+</html>

@@ -22,8 +22,6 @@
                 <th> ID CLIENTE                    </th> 
                 <th> N° CLIENTE REGISTRADO         </th>
                 <th> NOMBRE CLIENTE                </th>
-                <th> TIPO CLIENTE                  </th>
-                <th> DESCRIPCION CLIENTE           </th>
                 <th> DIRECCION CLIENTE             </th>
                 <th> UBICACION CLIENTE             </th>
                 <th> CONTACTO CLIENTE              </th>
@@ -37,8 +35,6 @@
             $id_cliente = $row["id_cliente"];
             $n°_cliente_reg = $row["n°_cliente_reg"];
             $nombre_cliente = $row["nombre_cliente"];
-            $tipo_cliente = $row["tipo_cliente"];
-            $descripcion_cliente = $row["descripcion_cliente"];
             $direccion_cliente = $row["direccion_cliente"];
             $ubicacion_cliente = $row["ubicacion_cliente"];
             $contacto_cliente = $row["contacto_cliente"];
@@ -48,8 +44,6 @@
                 <td>' . $id_cliente . '</td> 
                 <td>' . $n°_cliente_reg . '</td>
                 <td>' . $nombre_cliente . '</td>
-                <td>' . $tipo_cliente . '</td>
-                <td>' . $descripcion_cliente . '</td>
                 <td>' . $direccion_cliente . '</td>
                 <td>' . $ubicacion_cliente . '</td>
                 <td>' . $contacto_cliente . '</td>
@@ -59,7 +53,6 @@
         }
         echo '<table class="table2";>
             <tr>
-                <th><a href="../M_cliente_UA.html?id=' . $id_cliente . '">MODIFICAR</a></th>
                 <th><a href="../R_cliente_UA.html">CONTINUAR</a></th> 
                 <th><a href="../E_cliente_UA.html?id=' . $id_cliente . '">ELIMINAR</a></th>
             </tr>';

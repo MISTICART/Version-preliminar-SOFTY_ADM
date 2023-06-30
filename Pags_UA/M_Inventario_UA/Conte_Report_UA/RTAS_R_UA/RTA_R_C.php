@@ -11,21 +11,17 @@
 </head>
 <body>
     <div class="h2">
-         <h2>CONSULTA EXITOSA</h2> 
+        <h2>CONSULTA EXITOSA</h2> 
     </div>
     <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    
-    if (isset($_POST['id_reporte'])) {
-        $id_reporte = $_POST['id_reporte'];
-        
-    
-        include_once "../../../../Iniciar_Sesion/conexion.php";
-        
 
-        $sql = "SELECT * FROM reporte WHERE id_reporte = $id_reporte LIMIT 1";
-        $result = $conex->query($sql);
-        echo '<table class="table1";>
+    include_once "../../../../Iniciar_Sesion/conexion.php";
+    $id_reporte = $_POST['id_reporte'];
+    $sql = "SELECT * FROM reporte WHERE id_reporte = '$id_reporte' LIMIT 1";
+    $result = $conex->query($sql);
+
+    if ($result && $result->num_rows > 0) {
+        echo '<table>
         <tr>
             <th>ID DEL REPORTE</th> 
             <th>TITULO DEL REPORTE</th>
@@ -33,9 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <th>HORA Y FECHA DEL REPORTE</th>
             <th>TIPO DE REPORTE</th>
             <th>PRIORIDAD DEL REPORTE</th>
-    </tr>';
-        if ($result && $result->num_rows > 0) {
-            $row = $result->fetch_assoc();
+        </tr>';
+        while ($row = $result->fetch_assoc()) {
             $id_reporte = $row["id_reporte"];
             $titulo = $row["titulo"];
             $desc_reporte = $row["desc_reporte"];
@@ -44,30 +39,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $prioridad = $row["prioridad"];
             
             echo '<tr>
-                <td>' . $id_reporte .    '</td> 
-                <td>' . $titulo .        '</td>
+                <td>' . $id_reporte . '</td> 
+                <td>' . $titulo . '</td>
                 <td>' . $desc_reporte . '</td>
                 <td>' . $hora_fecha_reporte . '</td>
                 <td>' . $tipo_reporte . '</td>
-                <td>' . $prioridad .     '</td>
+                <td>' . $prioridad . '</td>
             </tr>';
-        } else {
-            echo "<p>No se encontró el reporte con el ID: $id_reporte</p>";
         }
-        echo '<table class="table2";>
+    } else {
+        echo "<p>No se encontró el reporte con el ID: $id_reporte</p>";
+    }
+    echo '<table class="table2">
         <tr>
             <th><a href="../C_Reporte.html">CONTINUAR</a></th> 
             <th><a href="../E_Reporte.html?id=' . $id_reporte . '">ELIMINAR</a></th> 
-        </tr>';
-      
-        $result->free();
-        $conex->close();
+        </tr>
+    </table>';
+
+    if ($result && $result->num_rows > 0) {
+        echo '<form action="descarga_R.php" method="post">
+        <input type="hidden" name="sql" value="' . htmlentities($sql) . '">
+        <input class="input_final" type="submit" value="DESCARGAR TABLA">
+      </form>';
     } else {
-    
-        echo "<p>No se proporcionó el ID del producto</p>";
+        echo "<p>NO SE ENCONTRARON REGISTROS EN LA TABLA DE REPORTES</p>";
     }
-}
-?>
+
+    $result->free();
+    $conex->close();
+    ?>
 
 </body>
 </html>

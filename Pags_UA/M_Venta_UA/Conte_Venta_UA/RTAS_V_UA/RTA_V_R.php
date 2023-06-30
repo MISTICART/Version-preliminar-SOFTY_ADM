@@ -15,11 +15,11 @@
     </div>
     <?php
      include_once "../../../../Iniciar_Sesion/conexion.php";
-    
-     $sql = "SELECT * FROM venta WHERE id_venta = $id_venta LIMIT 1";
+     $n°_ventas = $_POST["n°_ventas"];
+     $sql = "SELECT * FROM venta WHERE n°_ventas = $n°_ventas limit 1 ";
      echo '<table>
             <tr>
-                <th> ID DE LAVENTA               </th> 
+                <th> ID DE LA VENTA               </th> 
                 <th> N° DE VENTA              </th>
                 <th> DESCRIPCION DE LA VENTA   </th>
                 <th> METODO DE PAGO DE LA VENTA   </th>
@@ -49,9 +49,9 @@
         }
          echo '<table class="table2";>
             <tr>
-                <td><a href="../M_Venta_UA.html?id=' . $id_venta . '">MODIFICAR</a></td>
+                <td><a href="../M_Venta_UA.html">MODIFICAR</a></td>
                 <td><a href="../R_Venta_UA.html">CONTINUAR</a></td> 
-                <td><a href="../E_Venta_UA.html?id=' . $id_venta . '">ELIMINAR</a></td>
+                <td><a href="../E_Venta_UA.html">ELIMINAR</a></td>
             </tr>';
         $RTA->free();
     }
